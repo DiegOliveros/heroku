@@ -9,7 +9,7 @@ import java.util.Arrays;
 @Controller
 public class PersonController {
 
-    @GetMapping ("/losusuarios")
+    @GetMapping
     String getPeople(Model model){
         model.addAttribute("algo","2. Esto es un texto desde una variable en el controlador");
         model.addAttribute("persona", Arrays.asList(

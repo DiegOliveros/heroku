@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1 th:text="${algo}"></h1>
+    <h2>Un texto desde usuarios</h2>
+<table class="table table-success table-striped">
+    <thead>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Edad</th>
+    <th>Nombre Completo</th>
+
+    </thead>
+    <tbody>
+    <tr th:each="people: ${persona}">
+        <td class="table-danger" th:text="${people.nombre}"></td>
+        <td th:text="${people.edad}"></td>
+        <td th:text="${people.apellido}"></td>
+        <td th:text="${people.nombres}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
